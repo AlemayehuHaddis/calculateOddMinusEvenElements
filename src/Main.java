@@ -1,17 +1,22 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int[] sampleData = {3,  6, 4, 9, 8};
+        int result = calculateOddMinusEvenElements(sampleData);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.println(String.valueOf(result));
+
+    }
+    static int calculateOddMinusEvenElements(int[] givenArray){
+        int sumOfEvenElements = 0;
+        int sumOfOddElements = 0;
+
+        for(int i=0; i<givenArray.length; i++){
+            if(givenArray[i] % 2  ==  0){
+                sumOfEvenElements = sumOfEvenElements + givenArray[i];
+            } else
+                sumOfOddElements = sumOfOddElements + givenArray[i];
         }
+        return sumOfOddElements - sumOfEvenElements;
     }
 }
