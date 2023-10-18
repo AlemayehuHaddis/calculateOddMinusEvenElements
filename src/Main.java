@@ -11,11 +11,11 @@ public class Main {
         int sumOfEvenElements = 0;
         int sumOfOddElements = 0;
 
-        for(int i=0; i<givenArray.length; i++){
-            if(givenArray[i] % 2  ==  0){
-                sumOfEvenElements = sumOfEvenElements + givenArray[i];
+        for (int j : givenArray) {
+            if (j % 2 == 0) {
+                sumOfEvenElements += j;
             } else
-                sumOfOddElements = sumOfOddElements + givenArray[i];
+                sumOfOddElements += j;
         }
         return sumOfOddElements - sumOfEvenElements;
     }
